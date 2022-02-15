@@ -1,0 +1,3 @@
+httpcore[http2]
+cffi
+
