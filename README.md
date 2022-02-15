@@ -8,7 +8,7 @@ Go has its own standard TLS library, so it was forked to make modifications http
 
 Looking for alternative TLS libraries, Chrome uses BoringSSL, and Firefox uses NSS. BoringSSL is a fork of OpenSSL, so it should be easier to swap in than NSS.
 
-I figured that if I built BoringSSL as a shared library, I should be able to use it from Python via ctypes/cffi/cython. I used manylinux and Github Actions to create a binary wheel and upload it to testpypi: https://github.com/jonatron/boringssl/commit/2b5e5c66fa3d947d62fc6c416f06413b70b9727c . There's only a wheel for x86_64 linux python3.6 currently, but it should be widely compatible.
+I figured that if I built BoringSSL as a shared library, I should be able to use it from Python via ctypes/cffi/cython. I used manylinux and Github Actions to create a binary wheel and upload it to testpypi: https://github.com/jonatron/boringssl/commit/75241956b3d748888ae4906f45ded14b120dc999 . There's only a wheel for x86_64 linux python3.6 currently, but it should be widely compatible.
 
 I validated the idea by writing a very basic HTTP1.1 client using a raw socket, in `http11_client.py`.
 
