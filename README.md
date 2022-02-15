@@ -18,9 +18,12 @@ It was easy to write a NetworkBackend for httpcore, `boring_backend.py` is less 
 **This isn't ready to use, for example certificate validation and closing sockets is missing.**
 
 You can try out `core_h2.py` by running:
-`python3 -m venv venv`
-`source venv/bin/activate`
-`pip install -i https://test.pypi.org/simple/ boringssl-binary-build`
-`pip install -r requirements.txt`
-`python core_h2.py`
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -i https://test.pypi.org/simple/ boringssl-binary-build
+pip install -r requirements.txt
+python core_h2.py
+```
+
 In the future, if requirements.txt breaks, use frozen_requirements.txt .
